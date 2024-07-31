@@ -1,7 +1,7 @@
 import { useState } from "react";
 
-export default function Word(props) {
-  const {
+export default function Word(/*props*/{data}) {
+  /*const {
     word,
     pronunciation,
     definition,
@@ -14,7 +14,9 @@ export default function Word(props) {
     antonyms,
     etymology,
     array
-  } = props;
+  } = props;*/
+
+  const {word,pronunciation,definition,icon,category,note,partOfSpeech,example,synonyms,antonyms,etymology,array} = data
 
   const definitionElement = definition.map((sense, index, array) => {
     const senseNum = array.length > 1 ? `${index + 1}. ` : "";

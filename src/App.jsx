@@ -28,15 +28,15 @@ export default function App() {
     <div className='wrapper'>
       <Header />
 
-      <NavButtons
-        wordsDataArray={wordsDataArray}
+      <NavButtons data={{wordsDataArray, currentWord, setCurrentWord, position:'top' }}
+        /*wordsDataArray={wordsDataArray}
         currentWord={currentWord}
         setCurrentWord={setCurrentWord}
-        position='top'
+        position='top'*/
       />
 
-      <Word
-        word={currentWord.word}
+      <Word data={{...currentWord,array: wordsDataArray}} 
+        /*word={currentWord.word}
         pronunciation={currentWord.pronunciation}
         definition={currentWord.definition}
         icon={currentWord.icon}
@@ -47,14 +47,14 @@ export default function App() {
         synonyms={currentWord.synonyms}
         antonyms={currentWord.antonyms}
         etymology={currentWord.etymology}
-        array={wordsDataArray}
+        array={wordsDataArray}*/
       />
 
-      <NavButtons
-        wordsDataArray={wordsDataArray}
+      <NavButtons data={{wordsDataArray, currentWord, setCurrentWord, position:'bottom' }}
+        /*wordsDataArray={wordsDataArray}
         currentWord={currentWord}
         setCurrentWord={setCurrentWord}
-        position='bottom'
+        position='bottom'*/
       />
 
       <Footer />

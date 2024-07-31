@@ -1,9 +1,15 @@
 import React from "react"
 import Button from "./Button"
 
-export default function NavButtons(props) {
+export default function NavButtons(/*props*/{data}) {
   
-	const { wordsDataArray, currentWord, setCurrentWord, position } = props
+	/*const { wordsDataArray, currentWord, setCurrentWord, position } = props*/
+
+	if (!data || !data.wordsDataArray) {
+		return null; // veya bir yükleniyor göstergesi
+	  }
+
+	const { wordsDataArray, currentWord, setCurrentWord, position } = data
 
 	function changeWord(currentIndex, direction, position) {
 		let nextIndex
